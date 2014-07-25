@@ -1,3 +1,15 @@
 html, body {
   margin: 20px;
 }
+#wrap {
+  width: 900px;
+  margin: 0 auto;
+}
+#left_col {
+  float: left;
+  width: 25%;
+}
+#right_col {
+  float: right;
+  width: 75%;
+}

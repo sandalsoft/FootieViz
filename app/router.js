@@ -5,7 +5,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('players');
+  this.resource('players', function() {
+    this.resource('player', {path: '/:player_id'});
+  });
+  
 });
 
 export default Router;

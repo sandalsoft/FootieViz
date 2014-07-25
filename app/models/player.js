@@ -61,4 +61,10 @@ default DS.Model.extend({
   element_type: DS.attr(''),
   team: DS.attr(''),
 
+  fullName: function() {
+    return this.get('first_name') + ' ' + this.get('second_name');
+    }.property('first_name', 'second_name'),
+  photoUrl: function() {
+    return 'http://cdn.ismfg.net/static/plfpl/img/shirts/photos/' + this.get('photo');
+    }.property('photo'),
 });

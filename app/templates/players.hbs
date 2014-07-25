@@ -1,5 +1,13 @@
-Players:<br>
+<div id="left_col">
 
-{{#each player in model}}
-  {{player.id}}: {{player.first_name}} {{player.second_name}}<br>
-{{/each}}
+  {{#link-to 'players' }}Players{{/link-to}}<br>
+
+  {{#each player in model}}
+    {{#link-to 'player' player.id}}{{player.first_name}} {{player.second_name}}{{/link-to}}<br>
+  {{/each}}
+
+</div>
+
+<div id="right_col">
+  {{outlet}}
+</div>
