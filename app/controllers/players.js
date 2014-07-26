@@ -2,12 +2,22 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
 
-  filter: '',
+  // totalPoints: function() {
+  //   return this.get('model').computed.sum('total_points');
+  //   }.property('model.@each'),
 
+  totalPointsArray: Ember.computed.mapBy('model', 'total_points'),
+  totalPoints: Ember.computed.sum('totalPointsArray'),
+
+  totalGoalsArray: Ember.computed.mapBy('model', 'goals_scored'),
+  totalGoals: Ember.computed.sum('totalGoalsArray'),
+
+
+
+  filter: '',
   filterDidChange: function() {
     this.applyFilter();
   }.observes('filter'),
-
   applyFilter: function() {
     var filtered;
     var filter = this.get('filter');

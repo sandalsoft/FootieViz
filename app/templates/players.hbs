@@ -3,7 +3,6 @@
   {{#link-to 'players' }}Players{{/link-to}}<br>
   Filter: {{input type='text' value=filter placeholder='Search'}}
   <br>
-  <hr>
   {{#each player in filtered_players}}
     {{#link-to 'player' player.id}}{{player.first_name}} {{player.web_name}}{{/link-to}}<br>
   {{/each}}
