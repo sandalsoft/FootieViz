@@ -17,4 +17,11 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('vendor/moment/min/moment.min.js');
+app.import('vendor/numeral/min/numeral.min.js');
+app.import('vendor/metro-ui-css/css/metro-bootstrap.css');
+app.import('vendor/metro-ui-css/fonts/iconFont.ttf');
+app.import('vendor/metro-ui-css/min/metro.min.js');
+
+
 module.exports = app.toTree();

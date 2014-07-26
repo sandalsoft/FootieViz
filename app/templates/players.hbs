@@ -1,8 +1,16 @@
 <div id="left_col">
 
   {{#link-to 'players' }}Players{{/link-to}}<br>
+  Filter: [ 
+    <a href='#' {{action allPlayers}}>All</a>
+    <a href='#' {{action filterByDreamteam}}>Dream Team</a>
+    <a href='#' {{action filterByTeam 4}}>Chelsea</a>
+    ]
 
-  {{#each player in model}}
+
+  <br>
+
+  {{#each player in filteredPlayers}}
     {{#link-to 'player' player.id}}{{player.first_name}} {{player.second_name}}{{/link-to}}<br>
   {{/each}}
 

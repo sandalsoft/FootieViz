@@ -1,2 +1,10 @@
-{{fullName}} <br>
- <img {{bind-attr src=photoUrl}} alt="Player Image">
+
+{{fullName}}  {{team_name}}<img {{bind-attr src=badgeImageUrl}} alt="Badge Image"><br>
+{{type_name}} {{format-currency now_cost}}
+<div class="player_image">
+  <img {{bind-attr src=photoUrl}} alt="Player Image"> 
+</div>
+
+Total Points: {{total_points}}<br>
+Goals: {{goals_scored}}<br>
+

@@ -65,6 +65,10 @@ default DS.Model.extend({
     return this.get('first_name') + ' ' + this.get('second_name');
     }.property('first_name', 'second_name'),
   photoUrl: function() {
-    return 'http://cdn.ismfg.net/static/plfpl/img/shirts/photos/' + this.get('photo');
+    return 'http://cdn.ismfg.net/static/plfpl/img/shirts/photos/' + this.get('photo');  
     }.property('photo'),
+
+  badgeImageUrl: function() {
+    return 'http://cdn.ismfg.net/static/plfpl/img/badges/badge_' + this.get('team_id') + '.png';
+    }.property('team_id'),
 });
