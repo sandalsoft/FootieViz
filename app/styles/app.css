@@ -15,12 +15,18 @@ html, body {
   float: right;
   width: 75%;
 }
+#player_name {
+  font-size: 20px;
+  font-weight: 400px;
+}
 .player_image {
   width: 184px;
   height: 154px;
   border-style: solid;
   border-width: thin;
 }
+
+
 .box {
   width: 184px;
   height: 154px;
