@@ -61,14 +61,14 @@ default DS.Model.extend({
   element_type: DS.attr(''),
   team: DS.attr(''),
 
-  fullName: function() {
+  full_name: function() {
     return this.get('first_name') + ' ' + this.get('second_name');
     }.property('first_name', 'second_name'),
-  photoUrl: function() {
+  photo_url: function() {
     return 'http://cdn.ismfg.net/static/plfpl/img/shirts/photos/' + this.get('photo');  
     }.property('photo'),
 
-  badgeImageUrl: function() {
+  badge_image_url: function() {
     return 'http://cdn.ismfg.net/static/plfpl/img/badges/badge_' + this.get('team_id') + '.png';
     }.property('team_id'),
 });

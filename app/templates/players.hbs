@@ -1,21 +1,13 @@
-<div id="left_col">
+<div class="left_col">
 
   {{#link-to 'players' }}Players{{/link-to}}<br>
-  Filter: [ 
-    <a href='#' {{action allPlayers}}>All</a>
-    <a href='#' {{action filterByDreamteam}}>Dream Team</a>
-    <a href='#' {{action filterByTeam 4}}>Chelsea</a>
-    ]
-
-
+  Filter: {{input type='text' value=filter placeholder='Search'}}
   <br>
-
-  {{#each player in filteredPlayers}}
-    {{#link-to 'player' player.id}}{{player.first_name}} {{player.second_name}}{{/link-to}}<br>
+  <hr>
+  {{#each player in filtered_players}}
+    {{#link-to 'player' player.id}}{{player.first_name}} {{player.web_name}}{{/link-to}}<br>
   {{/each}}
 
 </div>
 
-<div id="right_col">
-  {{outlet}}
-</div>
+{{outlet}}

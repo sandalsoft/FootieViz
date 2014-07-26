@@ -30,10 +30,14 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
+    ENV.HOST = 'http://localhost:3000';
+    ENV.NAMESPACE = 'api';
 
   }
 
   if (environment === 'production') {
+    ENV.HOST = 'http://localhost:3000';
+    ENV.NAMESPACE = 'api';
 
   }
 

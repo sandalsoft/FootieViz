@@ -7,13 +7,20 @@ html, body {
   width: 900px;
   margin: 0 auto;
 }
-#left_col {
+.left_col {
   float: left;
-  width: 25%;
+  margin: 20px;
+  width: 20%;
 }
-#right_col {
+.center_col {
+  display: inline-block;
+  margin: 20px;
+  width: 40%;
+}
+.right_col {
   float: right;
-  width: 75%;
+  margin: 20px;
+  width: 40%;
 }
 #player_name {
   font-size: 20px;
@@ -24,42 +31,4 @@ html, body {
   height: 154px;
   border-style: solid;
   border-width: thin;
-}
-
-
-.box {
-  width: 184px;
-  height: 154px;
-  background: #FFF;
-}
-.shadow {
-  position: relative;
-}
-.shadow:before, .shadow:after {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width: 300px;
-  background: #777;
-  -webkit-box-shadow: 0 15px 10px #777;
-  -moz-box-shadow: 0 15px 10px #777;
-  box-shadow: 0 15px 10px #777;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-.shadow:after {
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  -o-transform: rotate(3deg);
-  -ms-transform: rotate(3deg);
-  transform: rotate(3deg);
-  right: 10px;
-  left: auto;
 }

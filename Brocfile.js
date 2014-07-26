@@ -19,9 +19,9 @@ var app = new EmberApp();
 
 app.import('vendor/moment/min/moment.min.js');
 app.import('vendor/numeral/min/numeral.min.js');
-app.import('vendor/metro-ui-css/css/metro-bootstrap.css');
-app.import('vendor/metro-ui-css/fonts/iconFont.ttf');
-app.import('vendor/metro-ui-css/min/metro.min.js');
+// app.import('vendor/metro-ui-css/css/metro-bootstrap.css');
+// app.import('vendor/metro-ui-css/fonts/iconFont.ttf');
+// app.import('vendor/metro-ui-css/min/metro.min.js');
 
 
 module.exports = app.toTree();
