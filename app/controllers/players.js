@@ -12,7 +12,7 @@ export default Ember.ArrayController.extend({
   totalGoalsArray: Ember.computed.mapBy('model', 'goals_scored'),
   totalGoals: Ember.computed.sum('totalGoalsArray'),
 
-
+    
 
   filter: '',
   filterDidChange: function() {

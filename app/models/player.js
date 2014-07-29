@@ -74,4 +74,9 @@ export default DS.Model.extend({
   price: function() {
     return this.get('now_cost') / 10;
   }.property('now_cost'),
+
+  nextFixture: function() {
+    return this.get('fixtures.all[0][2]');
+  }.property('fixtures')
+
 });

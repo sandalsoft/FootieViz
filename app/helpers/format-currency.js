@@ -2,7 +2,7 @@
 import Ember from 'ember';
 
 export default Ember.Handlebars.makeBoundHelper(function(val) {
-  return '£' + numeral(val/10).format('0.00');
+  return '£' + numeral(val).format('00.00');
 
 
   // if (isNaN(val)) {
