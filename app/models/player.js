@@ -60,15 +60,24 @@ export default DS.Model.extend({
   element_type: DS.attr(''),
   team: DS.attr(''),
 
+  photoBaseUrl: function() {
+    return 'http://cdn.ismfg.net/static/plfpl/img/shirts/photos/';
+    }.property('photo'),
+
+  badgeBaseUrl: function() {
+    return 'http://cdn.ismfg.net/static/plfpl/img/badges/badge_';
+  }.property('team_id'),
+
   full_name: function() {
     return this.get('first_name') + ' ' + this.get('second_name');
   }.property('first_name', 'second_name'),
+
   photo_url: function() {
-    return 'http://cdn.ismfg.net/static/plfpl/img/shirts/photos/' + this.get('photo');
+    return this.get('photoBaseUrl') + this.get('photo');
   }.property('photo'),
 
   badge_image_url: function() {
-    return 'http://cdn.ismfg.net/static/plfpl/img/badges/badge_' + this.get('team_id') + '.png';
+    return this.get('badgeBaseUrl') + this.get('team_id') + '.png';
   }.property('team_id'),
 
   price: function() {
@@ -77,6 +86,12 @@ export default DS.Model.extend({
 
   nextFixture: function() {
     return this.get('fixtures.all[0][2]');
-  }.property('fixtures')
+  }.property('fixtures'),
+
+  seasonsInEPL: function() {
+    return this.get('fixtures.all.length');
+  }.property(),
+
+
 
 });

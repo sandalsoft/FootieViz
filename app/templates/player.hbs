@@ -13,8 +13,6 @@
   Selected by: {{selected_by_percent}}%<br>
   Next Fixture: {{next_fixture}}<br>
 
-
-
 </div>
 
 <div class="right_col">
@@ -23,5 +21,9 @@
   Total points: {{format-goals totalPoints}}<br>
   Total Goals: {{format-goals totalGoals}}<br>
   Most pop: {{mostPopularPlayer.full_name}}<br>
+  {{playersWithMorePointsSameCost.length}} Players with more points that cost less:<br>
+   {{#each player in playersWithMorePointsSameCost}}
+      {{#link-to 'player' player.id}}{{player.first_name}} {{player.web_name}}{{/link-to}}<br>
+    {{/each}}
   </div>
 

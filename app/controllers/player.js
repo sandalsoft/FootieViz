@@ -34,4 +34,23 @@ export default Ember.ObjectController.extend({
     return avgPointsForPosition;
     }.property('total_points', 'allPlayers'),
 
+  avgPointsPerGameForPosition: function() {
+    var avgPointsForPosition =  this.get('sumAllPointsForPosition') / this.get('playersAtSamePosition').length;
+    return avgPointsForPosition;
+    }.property('total_points', 'allPlayers'),
+
+  playersWithMorePointsSameCost: function() {
+    var that = this;
+    /*jshint unused: vars */
+    var playersWithMorePoints = this.get('playersAtSamePosition').filter(function(player, index, enumerable) {
+      if (player.get('total_points') >= that.get('total_points') && 
+        player.get('now_cost') <= that.get('now_cost') &&
+        player.get('web_name') !== that.get('web_name')) {
+        // window.console.log('! ' + player.get('web_name') + ': ' + player.get('total_points') + ' | ' + player.get('now_cost'));
+        return player;
+      }
+    });
+    return playersWithMorePoints;
+    }.property('now_cost', 'total_points'),
+
 });
