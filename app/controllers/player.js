@@ -53,6 +53,20 @@ export default Ember.ObjectController.extend({
     return playersWithMorePoints;
     }.property('now_cost', 'total_points'),
 
+    playersWithBetterFormSameCost: function() {
+      var that = this;
+      /*jshint unused: vars */
+      var playersWithMorePoints = this.get('playersAtSamePosition').filter(function(player, index, enumerable) {
+        if (player.get('form') >= that.get('form') && 
+          player.get('now_cost') <= that.get('now_cost') &&
+          player.get('web_name') !== that.get('web_name')) {
+          // window.console.log('! ' + player.get('web_name') + ': ' + player.get('form') + ' | ' + player.get('now_cost'));
+          return player;
+        }
+      });
+      return playersWithMorePoints;
+      }.property('now_cost', 'form'),
+
     fixtureList: function() {
       return this.get('fixtures').map(function(fixture) {
         return fixture[2];
