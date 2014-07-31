@@ -53,4 +53,10 @@ export default Ember.ObjectController.extend({
     return playersWithMorePoints;
     }.property('now_cost', 'total_points'),
 
+    fixtureList: function() {
+      return this.get('fixtures').map(function(fixture) {
+        return fixture[2];
+      }); 
+      }.property('fixtures'),
+
 });

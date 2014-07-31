@@ -1,11 +1,13 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  fixtures: DS.hasMany('fixture', {
+    async: true
+  }),
+  seasons_history: DS.hasMany('seasonshistory', {
+    async: true
+  }),
   photo: DS.attr(''),
-  event_explain: DS.attr(''),
-  fixture_history: DS.attr(''),
-  season_history: DS.attr(''),
-  fixtures: DS.attr(''),
   event_total: DS.attr(''),
   type_name: DS.attr(''),
   team_name: DS.attr(''),
