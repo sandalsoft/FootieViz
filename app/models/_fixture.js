@@ -1,4 +1,4 @@
-import DS from 'ember-data';
+
 
 export default DS.Model.extend({
   date_time: DS.attr(''),

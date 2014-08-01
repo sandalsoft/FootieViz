@@ -1,4 +1,4 @@
-import DS from 'ember-data';
+
 import ajax from 'ic-ajax';
 
 export default DS.RESTAdapter.extend({
