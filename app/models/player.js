@@ -1,9 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  fixtures: DS.hasMany('fixture', {
-    async: true
-  }),
+  fixtures: DS.attr('array'),
   seasons_history: DS.hasMany('seasonshistory', {
     async: true
   }),
