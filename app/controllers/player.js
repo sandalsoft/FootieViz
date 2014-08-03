@@ -43,10 +43,10 @@ export default Ember.ObjectController.extend({
     var that = this;
     /*jshint unused: vars */
     var playersWithMorePoints = this.get('playersAtSamePosition').filter(function(player, index, enumerable) {
-      if (player.get('total_points') >= that.get('total_points') && 
-        player.get('now_cost') <= that.get('now_cost') &&
-        player.get('web_name') !== that.get('web_name')) {
-        // window.console.log('! ' + player.get('web_name') + ': ' + player.get('total_points') + ' | ' + player.get('now_cost'));
+      if (player.total_points >= that.get('total_points') && 
+        player.now_cost <= that.get('now_cost') &&
+        player.web_name !== that.get('web_name')) {
+        // window.console.log('! ' + player.web_name + ': ' + player.total_points + ' | ' + player.now_cost);
         return player;
       }
     });
@@ -57,20 +57,20 @@ export default Ember.ObjectController.extend({
       var that = this;
       /*jshint unused: vars */
       var playersWithMorePoints = this.get('playersAtSamePosition').filter(function(player, index, enumerable) {
-        if (player.get('form') >= that.get('form') && 
-          player.get('now_cost') <= that.get('now_cost') &&
-          player.get('web_name') !== that.get('web_name')) {
-          // window.console.log('! ' + player.get('web_name') + ': ' + player.get('form') + ' | ' + player.get('now_cost'));
+        if (player.form >= that.get('form') && 
+          player.now_cost <= that.get('now_cost') &&
+          player.web_name !== that.get('web_name')) {
+          // window.console.log('! ' + player.web_name + ': ' + player.form + ' | ' + player.now_cost);
           return player;
         }
       });
       return playersWithMorePoints;
       }.property('now_cost', 'form'),
 
-    fixtureList: function() {
-      return this.get('fixtures').map(function(fixture) {
-        return fixture[2];
-      }); 
-      }.property('fixtures'),
+    // fixtureList: function() {
+    //   return this.get('fixtures').map(function(fixture) {
+    //     return fixture[2];
+    //   }); 
+    //   }.property('fixtures'),
 
 });

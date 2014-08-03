@@ -1,7 +1,7 @@
 /* global require */
 
-var Application = require('footie-viz/app')['default'];
-var Router = require('footie-viz/router')['default'];
+var Application = require('footieviz/app')['default'];
+var Router = require('footieviz/router')['default'];
 import Ember from 'ember';
 
 export default function startApp(attrs) {

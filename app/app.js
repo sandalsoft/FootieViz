@@ -5,10 +5,10 @@ import loadInitializers from 'ember/load-initializers';
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
-  modulePrefix: 'footie-viz', // TODO: loaded via config
+  modulePrefix: 'footieviz', // TODO: loaded via config
   Resolver: Resolver
 });
 
-loadInitializers(App, 'footie-viz');
+loadInitializers(App, 'footieviz');
 
 export default App;
