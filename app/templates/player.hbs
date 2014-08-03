@@ -27,7 +27,7 @@
    {{#each player in playersWithMorePointsSameCost}}
       {{#link-to 'player' player.id}}{{player.first_name}} {{player.web_name}}{{/link-to}}<br>
     {{/each}}
-  {{playersWithBetterFormSameCost.length}} Players with more points that cost less:<br>
+  {{playersWithBetterFormSameCost.length}} Players with better form that cost less:<br>
    {{#each player in playersWithBetterFormSameCost}}
       {{#link-to 'player' player.id}}{{player.first_name}} {{player.web_name}}{{/link-to}}<br>
     {{/each}}
