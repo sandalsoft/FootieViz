@@ -88,10 +88,11 @@ export default Ember.ObjectController.extend({
       return playersWithMorePoints;
       }.property('now_cost', 'form'),
 
-    // fixtureList: function() {
-    //   return this.get('fixtures').map(function(fixture) {
-    //     return fixture[2];
-    //   }); 
-    //   }.property('fixtures'),
+    fixtureList: function() {
+      // window.console.log('content: ' + JSON.stringify(this.get('content')));
+      return this.get('content.fixtures.summary').map(function(fixture) {
+        return fixture;
+      }); 
+      }.property('fixtures'),
 
 });

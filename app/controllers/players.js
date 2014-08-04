@@ -18,6 +18,7 @@ export default Ember.ArrayController.extend({
   filterDidChange: function() {
     this.applyFilter();
   }.observes('filter'),
+
   applyFilter: function() {
     var filtered;
     var filter = this.get('filter');
@@ -29,10 +30,10 @@ export default Ember.ArrayController.extend({
     }
 
     filtered = filteredPlayers.filter(function(player) {
-      return rx.test(player.get('web_name')) || 
-        rx.test(player.get('full_name')) ||
-        rx.test(player.get('type_name')) || 
-        rx.test(player.get('team_name'));
+      return rx.test(player.web_name) || 
+        rx.test(player.full_name) ||
+        rx.test(player.type_name) || 
+        rx.test(player.team_name);
     });
 
     this.set('filtered_players', filtered);
