@@ -1,6 +1,6 @@
 import { test, moduleForModel } from 'ember-qunit';
 
-moduleForModel('owner', 'Owner', {
+moduleForModel('store', 'Store', {
   // Specify the other units that are required for this test.
   needs: []
 });

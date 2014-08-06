@@ -9,7 +9,7 @@ Router.map(function() {
     this.resource('player', {path: '/:player_id'});
   });
   
-  this.route('application');
+  // this.route('application');
 });
 
 export default Router;
