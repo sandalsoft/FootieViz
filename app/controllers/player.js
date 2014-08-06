@@ -95,4 +95,19 @@ export default Ember.ObjectController.extend({
       }); 
       }.property('fixtures'),
 
+    full_name: function() {
+      return this.get('first_name') + ' ' + this.get('second_name');
+    }.property('first_name', 'second_name'),
+
+    minutesPerGameLastSeason: function() {
+      var season_history = this.get('season_history');
+      window.console.log('s: ' + JSON.stringify(season_history[season_history.length - 1][1]));
+      return season_history[season_history.length - 1][1] / 38;
+      }.property('season_history'),
+
+    lastSeasonInLeague: function() {
+       var season_history = this.get('season_history');
+       return season_history[season_history.length - 1][0];
+       }.property('season_history'), 
+
 });
