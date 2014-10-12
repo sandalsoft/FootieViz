@@ -36,7 +36,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.HOST = 'http://api.sndl.io:3000';
+    ENV.HOST = 'http://api.sndl.io:45678';
     ENV.NAMESPACE = 'api';
 
   }

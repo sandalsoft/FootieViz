@@ -3,7 +3,7 @@ import Ember from 'ember';
 // import moment from 'moment';
 
 export default Ember.Handlebars.makeBoundHelper(function(val) {
-  window.console.log('val: ' + JSON.stringify(val));
+  // window.console.log('val: ' + JSON.stringify(val));
   /*
     val = ["16 Aug 15:00",
           "Gameweek 1",

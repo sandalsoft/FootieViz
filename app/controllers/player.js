@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ajax from 'ic-ajax';
 
 export
 default Ember.ObjectController.extend({
@@ -91,6 +92,7 @@ default Ember.ObjectController.extend({
 
     fixtureList: function() {
         // window.console.log('content: ' + JSON.stringify(this.get('content')));
+
         return this.get('content.fixtures.summary').map(function(fixture) {
             return fixture;
         });
